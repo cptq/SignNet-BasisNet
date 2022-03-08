@@ -11,7 +11,7 @@ from signbasisnet import SignPlus, IGNBasisInv, IGNShared
 parser = argparse.ArgumentParser()
 parser.add_argument('--epochs', type=int, default=2000)
 parser.add_argument('--lr',type=float,default=0.01)
-parser.add_argument('--filter_type',type=str,choices=['low','high','band','rejection','comb','low_band'],default='band')
+parser.add_argument('--filter_type',type=str,choices=['low','high','band','rejection','comb'],default='band')
 parser.add_argument('--net',type=str,choices=['ChebNet','BernNet','GcnNet','GatNet','ARMANet','GPRNet', 'MLP', 'DS', 'Linear', 'Transformer'],default='BernNet')
 parser.add_argument('--img_num',type=int,default=3)
 parser.add_argument('--use_eig', action='store_true')
