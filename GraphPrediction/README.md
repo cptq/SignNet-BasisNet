@@ -1,5 +1,16 @@
 #### ZINC results
 
+For implementations of SignNet see `layers/deepsigns.py` and to see its use as a positional encoding see `train/train_ZINC_graph_regression.py`.
+
+To run the experiments, use the scripts in `scripts/`.
+
+For example, to run our SignNet on ZINC with PNA base model, use 
+```
+bash scripts/ZINC/pna/script_ZINC_PNA_signinv_mask.sh
+```
+
+Sample results:
+
 | Base Model | Positional Encoding | #eigs | test MAE |
 |----------|:---:|:---:|:---:|
 | PNA | None | N/A | 0.128 | 
