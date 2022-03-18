@@ -28,3 +28,8 @@ Sample results:
 | Sparse Transformer | None | N/A | 0.283 | 
 | Sparse Transformer | SignNet | 16 | 0.115 | 
 | Sparse Transformer | SignNet | All | 0.102 | 
+
+
+
+### Attribution
+Our code is built on top of the [[LSPE repo](https://github.com/vijaydwivedi75/gnn-lspe)] by Dwivedi et al. in 2021, which in turn builds off of the setup in [[this repo](https://github.com/graphdeeplearning/benchmarking-gnns)] from "Benchmarking Graph Neural Networks" by Dwivedi et al. 2020.
