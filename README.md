@@ -6,6 +6,8 @@ Codebase for neural networks (SignNet and BasisNet) and experiments in the paper
 
 ![Symmetries of eigenvectors](LPE_symmetries.png)
 
+`GraphPrediction` contains the experiments for graph-level regression on ZINC.
+
 `LearningFilters` contains the spectral graph convolution experiments.
 
 **Coming Soon:** More experiments and implementations of our models! This repo and our paper are still a work in progress.
