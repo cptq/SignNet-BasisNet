@@ -239,43 +239,6 @@ def train_val_pipeline(MODEL_NAME, dataset, params, net_params, dirs):
     print("TOTAL TIME TAKEN: {:.4f}s".format(time.time()-t0))
     print("AVG TIME PER EPOCH: {:.4f}s".format(np.mean(per_epoch_time)))
     
-    
-    if net_params['pe_init'] == 'rand_walk':
-        # Visualize actual and predicted/learned eigenvecs
-        from utils.plot_util import plot_graph_eigvec
-        if not os.path.exists(viz_dir):
-            os.makedirs(viz_dir)
-
-        sample_graph_ids = [15,25,45]
-
-        for f_idx, graph_id in enumerate(sample_graph_ids):
-
-            # Test graphs
-            g_dgl = g_outs_test[graph_id]
-
-            f = plt.figure(f_idx, figsize=(12,6))
-
-            plt1 = f.add_subplot(121)
-            plot_graph_eigvec(plt1, graph_id, g_dgl, feature_key='eigvec', actual_eigvecs=True)
-
-            plt2 = f.add_subplot(122)
-            plot_graph_eigvec(plt2, graph_id, g_dgl, feature_key='p', predicted_eigvecs=True)
-
-            f.savefig(viz_dir+'/test'+str(graph_id)+'.jpg')
-
-            # Train graphs
-            g_dgl = g_outs_train[graph_id]
-
-            f = plt.figure(f_idx, figsize=(12,6))
-
-            plt1 = f.add_subplot(121)
-            plot_graph_eigvec(plt1, graph_id, g_dgl, feature_key='eigvec', actual_eigvecs=True)
-
-            plt2 = f.add_subplot(122)
-            plot_graph_eigvec(plt2, graph_id, g_dgl, feature_key='p', predicted_eigvecs=True)
-
-            f.savefig(viz_dir+'/train'+str(graph_id)+'.jpg')
-
     writer.close()
 
     """
