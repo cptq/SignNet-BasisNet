@@ -4,7 +4,8 @@ By Derek Lim*, Joshua Robinson*, Lingxiao Zhao, Tess Smidt, Suvrit Sra, Haggai M
 
 Codebase for neural networks (SignNet and BasisNet) and experiments in the paper.
 
-<img src="LPE_symmetries.png" width=60%>
+
+<img src="large_thumbnail.png" width=50%>
 
 ### Experiments
 
@@ -14,4 +15,7 @@ Codebase for neural networks (SignNet and BasisNet) and experiments in the paper
 
 The intrinsic neural fields experiments use private code from the authors of the [original paper](https://arxiv.org/abs/2203.07967).
 
+<img src="LPE_symmetries.png" width=50%>
+
 **Coming Soon:** More experiments and implementations of our models! This repo and our paper are still a work in progress.
+
