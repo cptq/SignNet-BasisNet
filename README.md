@@ -9,11 +9,21 @@ Codebase for neural networks (SignNet and BasisNet) and experiments in the paper
 
 ### Experiments
 
+`Alchemy` contains the experiments for graph-level regression on Alchemy.
+
 `GraphPrediction` contains the experiments for graph-level regression on ZINC.
 
 `LearningFilters` contains the spectral graph convolution experiments.
 
-The intrinsic neural fields experiments use private code from the authors of the [original paper](https://arxiv.org/abs/2203.07967).
+The intrinsic neural fields experiments use private code from the authors of the [original paper](https://arxiv.org/abs/2203.07967), so we do not yet publically release the SignNet codes for these.
+
+### Implementations
+
+PyTorch Geometric SignNet for graph prediction: in `Alchemy`.
+
+DGL SignNet for graph prediction: in `GraphPrediction`.
+
+BasisNet for single graphs: in `LearningFilters`.
 
 <img src="LPE_symmetries.png" width=50%>
 
