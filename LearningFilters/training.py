@@ -1,3 +1,4 @@
+import time
 import numpy as np
 import os 
 import argparse
@@ -236,6 +237,7 @@ for img_idx in range(args.img_num):
     min_loss=float('inf')
     re_epoch = 0
 
+    start_time = time.time()
     for epoch in range(args.epochs):
         loss,r2=train(img_idx,model,optimizer)
         if(min_loss>loss):
@@ -244,7 +246,9 @@ for img_idx in range(args.img_num):
             re_epoch = epoch
 
         if epoch % 100 == 0:
-            print(f'Epoch: {epoch}, Min loss {min_loss:.6f}, Best r2 {best_r2:.4f}')
+            elapsed = time.time() - start_time
+            print(f'Epoch: {epoch}, Min loss {min_loss:.6f}, Best r2 {best_r2:.4f}, Time {elapsed:.3f}')
+            start_time = time.time()
 
 
     results.append([min_loss,best_r2])
