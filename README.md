@@ -21,6 +21,8 @@ The intrinsic neural fields experiments use private code from the authors of the
 
 PyTorch Geometric SignNet for graph prediction: in `Alchemy`.
 
+PyTorch Geometric SignNet for graph prediction on ZINC: in `GINESignNetPyG`.
+
 DGL SignNet for graph prediction: in `GraphPrediction`.
 
 BasisNet for single graphs: in `LearningFilters`.
